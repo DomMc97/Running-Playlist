@@ -21,4 +21,12 @@ This first notebook deals with the acquisition of my Liked Songs from Spotify an
 
 This notebook consists of the unsupervised clustering of my Liked Songs from Spotify to create a set of playlists, with the hope that one of the clusters will be suitable for running. I used a Gaussian Mixture Model (GMM) to cluster the songs according too their audio features. I will used a GMM due to it's soft clustering feature which allows non-mutually exclusive clusters, this allows songs similar to multiple playlists to be included in both. 
 
-This process found 11 clusters. I concluded for plotting of centroids and empirical evidence (use of the playlists) that the 8th cluster is the most suitable running playlist. 
+This process found 11 clusters. I concluded for plotting of centroids and empirical evidence (use of the playlists) that the 8th cluster is the most suitable running playlist.
+
+## Spotify Classification
+
+This notebook consists of the binary classification as of each of my Liked songs on Spotify on there quality to run too: 1 being a good song to run too and 0 being a bad song to run too. 
+
+I did this firstly by the generation of a rating for 650 of my songs, this was done using the Spotify API to play a song followed by a user input to rate the song. From these ratings I built a classifiers using the songs audio features. I used both a Ridge classifier and a RBF kernel SVM classifier, both these models were optimised using cross-validation. 
+
+I selected the SVM model to be the most suitable model, I then proceeded to make a prediction of the quality of all the remaining songs in my Liked Songs using this model.
