@@ -15,3 +15,10 @@ This first notebook deals with the acquisition of my Liked Songs from Spotify an
 2.   The music should also be loud, which I define to be above average loudness for my Liked Songs, under the assumption that a loud song will 'pump me up'.
 3. The song should be energetic to psychologically enhance my own energy.
 4. The playlist should be of an order of roughly 150-300 songs in order to be long enough for repeated use without over repetition but not too long to overburden my phones memory.
+
+
+## Spotify Clustering
+
+This notebook consists of the unsupervised clustering of my Liked Songs from Spotify to create a set of playlists, with the hope that one of the clusters will be suitable for running. I used a Gaussian Mixture Model (GMM) to cluster the songs according too their audio features. I will used a GMM due to it's soft clustering feature which allows non-mutually exclusive clusters, this allows songs similar to multiple playlists to be included in both. 
+
+This process found 11 clusters. I concluded for plotting of centroids and empirical evidence (use of the playlists) that the 8th cluster is the most suitable running playlist. 
